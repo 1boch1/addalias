@@ -1,2 +1,2 @@
 # query-formatter
-Solves the problem of duplicated attributes, it adds the table name in front of each column of the query result.
+Solves the problem of duplicated query attributes, it adds the table name in front of each column of the query result.
