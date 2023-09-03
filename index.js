@@ -2,6 +2,7 @@
 /*
 tablesNames = ['Fruits', 'Foods', ...]
 tablesAttributes = [['color', 'weight', ...], ['calories', 'type', ...]]
+afterSelectQuery = "FROM ..."
 */
 
 function query_formatting(tablesNames, tablesAttributes, afterSelectQuery) {
@@ -29,4 +30,4 @@ function query_formatting(tablesNames, tablesAttributes, afterSelectQuery) {
     return query;
 }
 
-module.exports = helloWorld;
+module.exports = query_formatting;
