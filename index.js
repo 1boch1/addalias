@@ -1,46 +1,32 @@
-// the query must not contain attributes ot tables named: SELECT/select/JOIN/join
+// input:
+/*
+tablesNames = ['Fruits', 'Foods', ...]
+tablesAttributes = [['color', 'weight', ...], ['calories', 'type', ...]]
+*/
 
-// es: SELECT column1, column2, column3 FROM table INNER JOIN table2 WHERE condition
+function query_formatting(tablesNames, tablesAttributes, afterSelectQuery) {
+    let query_select = "SELECT ";
 
-function query_formatting(query) {
-    const regex = /(?:FROM|JOIN|from|join)\s+(\w+)/gi;
-    const matches = [];
-
-    let match = "";
-
-    while ((match = regex.exec(query)) !== null) {
-        matches.push(match[1]);
-    }
-
-    // ["table", "table2"]
-
-    let selectIndex = query.indexOf("SELECT");
-
-    if (selectIndex == -1) {
-        selectIndex = query.indexOf("select");
-
-        if (selectIndex == -1) return "";
-    }
-
-    const afterSelect = query.substring(selectIndex + "SELECT".length); // " column1, column2, column3 FROM table INNER JOIN table2 WHERE condition"
-    let columns_dirty = afterSelect.split(","); // [" column1" | " column2" | " column3 FROM table INNER JOIN table2 WHERE condition"]
-
-    let columns = [];
-
-    for (let word of columns_dirty) {
-        word = word.trim();
-
-        let splitted = word.split(" ");
-
-        if (splitted.length > 1) {
-            columns.push(splitted[0]);
-            break;
+    for (let i in tablesAttributes) {
+        for (let col of tablesNames[i]) {
+            query_select +=
+                tablesNames[i] +
+                "." +
+                col +
+                " as " +
+                tablesNames[i] +
+                "_" +
+                col +
+                ", ";
         }
-
-        columns.push(word);
     }
+
+    query_select = query_select.trim();
+    query_select = query_select.substring(0, query_select.length - 1);
+
+    const query = query_select + " " + afterSelectQuery;
+
+    return query;
 }
 
-const inputString =
-    "SELECT column1, column2, column3 FROM table INNER JOIN table2 WHERE condition";
-query_formatting(inputString);
+module.exports = helloWorld;
