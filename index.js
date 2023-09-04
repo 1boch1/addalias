@@ -8,8 +8,8 @@ afterSelectQuery = "FROM ..."
 function query_formatting(tablesNames, tablesAttributes, afterSelectQuery) {
     let query_select = "SELECT ";
 
-    for (let i in tablesAttributes) {
-        for (let col of tablesNames[i]) {
+    for (let i in tablesNames) {
+        for (let col of tablesAttributes[i]) {
             query_select +=
                 tablesNames[i] +
                 "." +
