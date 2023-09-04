@@ -1,31 +1,31 @@
 {
-  "name": "query-formatter",
-  "version": "1.0.0",
-  "description": "Solves the problem of duplicated attributes, it adds the table name in front of each column of the query result.",
-  "main": "index.js",
-  "scripts": {
-    "test": "node ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/1boch1/query-formatter.git"
-  },
-  "keywords": [
-    "query",
-    "sql",
-    "mysql",
-    "duplicates",
-    "duplicate",
-    "duplicated",
-    "formatter",
-    "name",
-    "alias",
-    "column"
-  ],
-  "author": "@1boch1",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/1boch1/query-formatter/issues"
-  },
-  "homepage": "https://github.com/1boch1/query-formatter#readme"
+    "name": "addalias",
+    "version": "1.0.0",
+    "description": "Solves the problem of duplicated query attributes, it adds the table name in front of each column of the query result.",
+    "main": "index.js",
+    "scripts": {
+        "test": "node ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/1boch1/addalias.git"
+    },
+    "keywords": [
+        "query",
+        "sql",
+        "mysql",
+        "duplicates",
+        "duplicate",
+        "duplicated",
+        "formatter",
+        "name",
+        "alias",
+        "column"
+    ],
+    "author": "@1boch1",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/1boch1/addalias/issues"
+    },
+    "homepage": "https://github.com/1boch1/addalias#readme"
 }
