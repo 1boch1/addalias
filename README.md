@@ -1,3 +1,3 @@
 # addalias
 
-Solves the problem of duplicated query attributes, it adds the table name in front of each column of the query result.
+Solves the Problem of Duplicated MySQL Attributes, it adds the table name in front of each column of the query result.
