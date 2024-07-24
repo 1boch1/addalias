@@ -1,7 +1,7 @@
 {
     "name": "addalias",
     "version": "1.0.3",
-    "description": "Solves the problem of duplicated query attributes, it adds the table name in front of each column of the query result.",
+    "description": "Solves the problem of duplicated query attributes, it adds the table name in front of each column of the query result",
     "main": "index.js",
     "scripts": {
         "test": "node ."
